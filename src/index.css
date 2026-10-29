@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::selection {
+    background-color: cyan;
+    color: black;
+}
+
+body {
+    background-color: #bfbfbf;
+}
+
+.active {
+    border-radius: 8px;
+    background-color: cyan;
+    color: black;
+    padding: 4px;
+}
