@@ -8,9 +8,11 @@ function Cart({ cart, setCart }) {
     return (
         <div className="my-5 flex-grow flex flex-col">
             <h1 className="text-center text-4xl font-bold text-blue-600">Cart</h1>
-            {cart.map((item, index, cart) => (
-                <Item key={item.id} item={item} cart={cart} setCart={setCart} />
-            ))}
+            <div className="mb-8">
+                {cart.map((item, index, cart) => (
+                    <Item key={item.id} item={item} cart={cart} setCart={setCart} />
+                ))}
+            </div>
             <h1 className="mt-auto text-center text-4xl font-bold text-black">Total: {sum} EGP</h1>
         </div>
     );
