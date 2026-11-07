@@ -35,9 +35,9 @@ function Item({ item: { id, price, availableQuantity, selectedQuantity }, cart, 
             <p className="text-center">Item: {id}</p>
             <p className="text-center">Price: {price} EGP</p>
             <div className="w-full flex flex-row justify-evenly md:justify-between items-center">
-                <button onClick={() => { decreaseQuantity(); }} className="bg-red-500 w-10 h-10 rounded-xl text-3xl">-</button>
+                <button onClick={() => { decreaseQuantity(); }} className="bg-red-500 w-10 h-10 rounded-xl text-3xl active:scale-105">-</button>
                 <p className="text-center">Quantity: {selectedQuantity}</p>
-                <button disabled={selectedQuantity === availableQuantity} onClick={() => { increaseQuantity(); }} className="bg-green-500 w-10 h-10 rounded-xl text-3xl disabled:opacity-60">+</button>
+                <button disabled={selectedQuantity === availableQuantity} onClick={() => { increaseQuantity(); }} className="bg-green-500 w-10 h-10 rounded-xl text-3xl active:scale-105 disabled:opacity-60 disabled:scale-100">+</button>
             </div>
             <p className="text-center">Total: {selectedQuantity * price} EGP</p>
         </div>
