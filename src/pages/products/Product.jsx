@@ -22,22 +22,13 @@ function Product({ product: { id, price, availableQuantity, imgSrc }, cart, setC
             selectedQuantity: 1
         };
 
-        // cart.push(newCartItem);  // how can this be allowed, pushing on a const array ?????
-        // setCart(cart);  // not late but does not trigger checkInCart function instantly
-
-        // const newCart = cart;
-        // newCart.push(newCartItem);
-        // setCart(newCart);   // not late but does not trigger checkInCart function
-
-        setCart(prev => [...prev, newCartItem]);  // late by 1 but triggers checkInCart function instantly
-        // setCart((prev) => { return [...prev, newCartItem]; }); // late by 1 but triggers checkInCart function instantly
+        setCart(prev => [...prev, newCartItem]);
     }
 
     function removeFromCart() {
         if (!checkInCart()) { return; }
         const newCart = cart.filter(item => item.id !== id);
-        setCart(newCart);  // this code is late by 1 but triggers checkInCart function instantly
-        // setCart(prev => newCart);  // this code is also late by 1 but triggers checkInCart function instantly
+        setCart(newCart);
     }
 
     return (

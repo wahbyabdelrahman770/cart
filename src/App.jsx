@@ -51,8 +51,8 @@ function App() {
     <div className="min-h-screen flex flex-col justify-start">
       <Header />
       <Routes>
-        <Route path="/" element={<Products products={products} setProducts={setProducts} cart={cart} setCart={setCart} />} />
-        <Route path="/cart" element={<Cart products={products} setProducts={setProducts} cart={cart} setCart={setCart} />} />
+        <Route path="/" element={<Products products={products} cart={cart} setCart={setCart} />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>
       <Footer />
     </div>

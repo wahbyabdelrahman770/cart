@@ -1,6 +1,6 @@
 function Item({ item: { id, price, availableQuantity, selectedQuantity }, cart, setCart }) {
 
-    function decreaseQuantity() {   // works fine but in console is late by 1. everything else is fine which is very weird
+    function decreaseQuantity() {
         if (selectedQuantity === 1) {
             const tempCart = cart.filter(item => item.id !== id);
             setCart(tempCart);
@@ -17,7 +17,7 @@ function Item({ item: { id, price, availableQuantity, selectedQuantity }, cart, 
         setCart(tempCart);
     }
 
-    function increaseQuantity() {  // works fine but in console is late by 1. everything else is fine which is very weird
+    function increaseQuantity() {
         if (selectedQuantity === availableQuantity) { return; }
         const newQuantity = selectedQuantity + 1;
         const tempItem = { id, price, availableQuantity, selectedQuantity: newQuantity };

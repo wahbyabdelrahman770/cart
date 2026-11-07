@@ -1,6 +1,6 @@
 import Product from './Product';
 
-function Products({ products, setProducts, cart, setCart }) {
+function Products({ products, cart, setCart }) {
 
     return (
         <div>
