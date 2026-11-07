@@ -1,4 +1,4 @@
-import Item from "./item";
+import Item from "./Item";
 
 function Cart({ cart, setCart }) {
     let sum = 0;
